@@ -14,7 +14,10 @@ class CanonBall {
 
   display(){
     var angle = this.body.angle;
+    var pos = this.body.position;
+    
     push();
+    translate(pos.x, pos.y);
     rotate(angle);
     imageMode(CENTER);
     image(this.image,this.body.position.x,this.body.position.y,50,70);
